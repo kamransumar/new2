@@ -1,0 +1,27 @@
+.text-center {
+  text-align: center;
+}
+.card-img-top {
+  width: 20%;
+}
+/*Call to Action*/
+
+.header-line {
+  height: 5px;
+  width: 100%;
+  content: "";
+  display: block;
+}
+.text-white {
+  color: white;
+}
+.pad-right {
+  margin-right: 1em;
+}
+/**/
+.card cta .cta--featured {
+  margin-bottom: 100px;
+}
+#jumbo1 {
+  background-image: url(https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwigw8mo8O7dAhXFCewKHfq_DYcQjRx6BAgBEAU&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_30042770_news-sign-icon-world-globe-symbol-seamless-grid-lines-texture-cells-repeating-pattern-white-texture-.html&psig=AOvVaw2KQsOo4YhsifJxb2RnO-_t&ust=1538814340232688);
+}
