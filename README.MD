@@ -1,23 +1,22 @@
 ## News junction
-app to veiw the news, 5.10.18
-By kamran sumar
-Description
+## app to veiw the news, 5.10.18 By kamran sumar
+## Description
 This is an application where by a user can pich the wide variety of news sorces and will get all the latest news reguarding different nations and subjects.The sources contain articles and the articles contain links to the full story if you want to further xplore on the news story.
 
-Setup/Installation Requirements
+## Setup/Installation Requirements
 python 3.6 and above is reqired to run the application.
 vs code is needed to write the code
 brew amd xcode are needed to install the necessary frameworks
 pip is required to install the required flask extensions
 here is how to run the project: *1.open the terminal *2.enter the vrtual environ ment with the following command- 'source virtual/bin/activate' *3.to run the aplication type- 'python3.7(depends on the version of python you have) manage.py'
-Known Bugs
-Technologies Used
+## Known Bugs
+## Technologies Used
 *python was the language used *flask was the frame work *pip was used to install the flask extensions etc *vs code was used to write the code its self *heroku was used to deploy the site \*git hub was used as the place to store the pproject
 
-Support and contact details
+## Support and contact details
 incase of any problems call the head dev of the project: \*kamran-0787251277
 
-License
+## License
 \*MIT License
 
 Copyright (c) 2018 kamran sumar
