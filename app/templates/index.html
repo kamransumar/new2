@@ -1,0 +1,45 @@
+{% extends 'base.html' %}{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> {% if title %}
+
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News Junction </title>
+    {% endif %}
+    {%block style%}
+    {{ super() }}
+    <link rel="stylesheet" href="/Users/macuser/Desktop/news/app/static/css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    {%endblock%}
+</head>
+
+<body>
+    {% for source in popular %}
+    <div class="container text-center mb-4 mt-4">
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header"><strong>{{ source.name}}</strong></div>
+                <div class="card-body">
+                    <p>
+                        <strong>description:</strong>{{
+                        source.description}}<br><strong>country:</strong>{{
+                        source.country}}</p>
+                </div>
+                <div class="card-footer"><a href="/source/{{source.id}}" class="btn btn-warning"> news articles</a></div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</body>
+
+</html>
+{% endblock%}

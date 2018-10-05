@@ -1,0 +1,50 @@
+{% extends 'base.html' %}{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"> {% if title %}
+
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News Junction </title>
+    {% endif %}
+    {%block style%}
+    {{ super() }}
+    <link rel="stylesheet" href="/Users/macuser/Desktop/news/app/static/css.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    {%endblock%}
+</head>
+
+<body>
+
+
+    {% for article in articles %}
+    <div class="jumbotron jumbotron-fluid text-center" id="jumbo1">
+
+        <div class="card-deck">
+            <div class="card cta cta--featured p-3 bg-info">
+                <span class="header-line gradient-color-1"></span>
+                <div class="card-block">
+                    <h3 class="card-title no-margin-top">{{ article.title}}<span class="fa fa-map pull-right"></span></h3>
+                    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                </div>
+                <div class="card-block">
+                    <img class="card-img-top width=20%" src="{{article.urlToImage}}" alt="Card image">
+                    <p class="card-text"><strong>description:</strong>{{ article.description}}<br>{{
+                        article.country}}<br>Time Published:{{article.publishedAt}}</p>
+                    <a href="{{ article.url }}" class="btn btn-warning texy-center">view story</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</body>
+
+</html>
+{% endblock%}
