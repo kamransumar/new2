@@ -1,4 +1,9 @@
 import os
+import jinja2
+
+jinja_environment = jinja2.Environment(autoescape=True,
+                                       loader=jinja2.FileSystemLoader('templates'))
+
 
 class Config:
     NEWS_API_SOURCE_URL = "https://newsapi.org/v2/sources?language=en&country=us&apiKey={}"
@@ -27,7 +32,8 @@ class DevConfig(Config):
 
     DEBUG = True
 
+
 config_options = {
-'development':DevConfig,
-'production':ProdConfig
+    'development': DevConfig,
+    'production': ProdConfig
 }
